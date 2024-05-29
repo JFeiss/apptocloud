@@ -22,7 +22,7 @@ app.use(express.static('public'));
 // init the data store
 db.defaults({ users: [] }).write();
 
-let port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // return all users
 app.get('/data', function (req, res) {
@@ -51,6 +51,6 @@ app.post('/add', function (req, res) {
 
 // start server
 // -----------------------
-app.listen(3000, function () {
-    console.log(`Running on port ${3000}`)
+app.listen(PORT, function () {
+    console.log(`Running on port ${PORT}`)
 })
